@@ -1,0 +1,50 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-lg-3">
+            <span class="filter">FILTER BY</span>
+            <div class="list-group pt-4">
+                <select class="list-group-item borderb" placeholder="Collection">
+                    <option selected>Collection</option>
+                    <option>Collection 1</option>
+                </select>
+                <select class="list-group-item borderb" placeholder="Color">
+                    <option selected>Color</option>
+                    <option>Red</option>
+                    <option>Grey</option>
+                </select>
+
+                <select class="list-group-item borderb" placeholder="Category">
+                    <option>Cateory</option>
+                </select>
+                <span class="price">Price Range</span>
+                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4"
+                    *ngFor="let product of productList | search: searchData | paginate: { itemsPerPage: 6, currentPage: p }">
+                    <div class="h-100">
+                        <img class="card-img-top" src="http://placehold.it/700x400" alt="">
+                        <div class="card-body p-0">
+                            <div class="w-100 name" (click)="info(product)">
+                                {{product.name}}
+                            </div>
+                            <div><span class="category"> {{product.category}}</span>
+                                <div class="float-right amt">Rs {{product.price}}</div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <small>&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            <span class="float-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="(productList | search: searchData).length === 0" class="nc">
+                    <p>No Data Found! </p>Your search keys does not match with any Data...
+                  </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
