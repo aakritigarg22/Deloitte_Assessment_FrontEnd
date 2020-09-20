@@ -1,0 +1,15 @@
+li{
+    font-size: 13px;
+    font-weight: 500;
+}
+.search{
+    padding-bottom: 1vh;
+    font-size: 13px;
+    font-weight: 500;
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid #00000029;
+}
+input:focus{
+    outline: none;
+}

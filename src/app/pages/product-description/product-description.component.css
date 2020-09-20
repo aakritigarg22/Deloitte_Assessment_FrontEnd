@@ -1,0 +1,29 @@
+.name{
+    font-size: 13px;
+    color: grey;
+}
+.pd-lr{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.f-15{
+    font-size: 15px;
+}
+.f-28{
+    font-size: 28px;
+    font-weight: 500;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5vw;
+}
+.buy{
+    background-color: #01796e;
+    border: none;
+    height: 6.5vh;
+    width: 6.5vw;
+    font-size: 14px;
+    color: white;
+}

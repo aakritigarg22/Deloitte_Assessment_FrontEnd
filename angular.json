@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "project-deloitte"
+    }
+  },
+  "defaultProject": "project-deloitte",
+  "cli": {
+    "analytics": "6a30a1a8-1ca9-4869-8fdc-72f577942c0b"
+  }
 }

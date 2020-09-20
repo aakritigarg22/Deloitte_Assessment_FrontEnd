@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light d-print-none">
+    <a class="navbar-brand" href="#" routerLink='/products'><i class="fa fa-bars" aria-hidden="true"></i></a>
+    <ul class="navbar-nav w-75">
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="product">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">SHOP</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">MAGAZINE</a>
+        </li>
+    </ul>
+    <div>
+        <i class="fa fa-search pr-2" aria-hidden="true"></i>
+        <input type="text" class="search" placeholder="Search" (keyup)="keyup($event)" />
+    </div>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link">CART</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="product">CHECKOUT</a>
+        </li>
+    </ul>
+</nav>
